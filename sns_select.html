@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ユーザー情報</title>
+    <link rel="stylesheet" href="css/range.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        div.container {
+            background-color: aqua;
+            display: grid;
+            /*
+            grid-template-areas: 
+            "side sub1 main";
+            "side sub2 main";
+            "side foot foot";
+*/
+            grid-template-rows: 200px 800px;
+            grid-template-columns: 100px 700px;
+            height: 1000px;
+            width: 800px;
+        }
+        
+        div.box_A {
+            background-color: blue;
+            /*            flex: 0 0 100px;*/
+            grid-row-start: 1;
+            grid-column-start: 2;
+        }
+        
+        div.box_B {
+            background-color: rebeccapurple;
+            /*            flex: 0 0 100px;*/
+            grid-row-start: 1;
+            grid-row-end: span 2;
+            grid-column-start: 1;
+        }
+        
+        div.box_C {
+            background-color: orange;
+            /*            flex: 0 0 100px;*/
+            grid-row-start: 2;
+            grid-column-start: 2;
+        }
+        
+        p {
+            border: 10px
+        }
+        
+        div.image {
+            background-color: red;
+            height: 30px;
+            width: 30px;
+        }
+
+    </style>
+</head>
+
+<body id="main">
+    <!-- Head[Start] -->
+    <header>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.php">データ登録</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Head[End] -->
+
+    <!-- Main[Start] -->
+    <div class="container">
+        <div class="box_A">
+            <!--        <div class="container jumbotron">-->
+            <p>写真</p>
+            <div class="image">
+            </div>
+            <!--            <?= $view ?>-->
+        </div>
+        <div class="box_B">
+
+        </div>
+        <div class="box_C">
+            <p>写真</p>
+        </div>
+
+    </div>
+    <!-- Main[End] -->
+
+</body>
+
+</html>
